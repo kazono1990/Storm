@@ -8,11 +8,17 @@
     <artifactId>word-count</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- https://mvnrepository.com/artifact/org.apache.storm/storm-core -->
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.storm/storm-core -->
         <dependency>
             <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.storm/storm-kafka-client -->
+        <dependency>
+            <groupId>org.apache.storm</groupId>
+            <artifactId>storm-kafka-client</artifactId>
             <version>1.0.2</version>
         </dependency>
     </dependencies>
