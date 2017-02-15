@@ -64,7 +64,6 @@ public class WordCountTopologyKafkaSpoutNamedTopics {
         builder.setSpout("kafka_spout", new KafkaSpout<>(getKafkaSpoutConfig(getKafkaSpoutStreams())), 1);
         builder.setBolt("split", new SplitSentenceBolt(), 8).shuffleGrouping("kafka_spout");
         builder.setBolt("count", new WordCountBolt(), 12).fieldsGrouping("split", new Fields("word"));
-
         return builder.createTopology();
     }
 
